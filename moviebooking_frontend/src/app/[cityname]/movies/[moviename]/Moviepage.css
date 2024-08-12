@@ -55,7 +55,7 @@
     gap: 10px;
 }
 
-.moviepage .c1.c11 .left .movie_details .title{
+.moviepage .c1 .c11 .left .movie_details .title{
     font-size: 40px;
     font-weight: 600;
 }
@@ -69,18 +69,14 @@
     color: var(--col1);
 }
 
-.moviepage .c1.c11 .left .movie_details .rating .languages p{
-    background-color: rgba(255,255,255,0.866);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 2px;
-    font-size: 15px;
-    font-weight: 600;
+.moviepage .c1 .c11 .left .movie_details .halls_languages{
+    display: flex;
+    gap: 10px;
 }
 
-.moviepage .c1.c11 .left .movie_details .halls_languages p{
-    background-color: rgba(255,255,255,0.866);
-    color: white;
+.moviepage .c1 .c11 .left .movie_details .halls_languages p{
+    background-color: rgba(255, 255, 255, 0.866);
+    color: black;
     padding: 5px 10px;
     border-radius: 2px;
     font-size: 15px;
@@ -88,7 +84,7 @@
 
 }
 
-.moviepage .c1.c11 .left .movie_details .duration_type_releasedat{
+.moviepage .c1 .c11 .left .movie_details .duration_type_releasedat{
     display: flex;
     gap:5px;
 }

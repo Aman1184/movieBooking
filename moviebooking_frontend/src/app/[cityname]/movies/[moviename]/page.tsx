@@ -9,15 +9,15 @@ const MoviePage = () => {
         title:"Stree 2:Sarkate Ka Aatank",
         rating:8.5,
         halls:[
-            "2D",
+            "2D ", 
             "3D"
         ],
         languages:[
             "Hindi"
         ],
         duration:"2h 29m",
-        type:"",
-        releasedate:"",
+        type:"Comedy/Horror",
+        releasedate:"15 Aug 2024",
         cast:[
             {
                 _id:"1",
@@ -79,7 +79,7 @@ const MoviePage = () => {
                         <BsFillStarFill className='star' />&nbsp;&nbsp;
                         {movie.rating}/10
                     </p>
-                    <div className='halls_language'>
+                    <div className='halls_languages'>
                         <p className='halls'>
                            {
                              movie.halls.map((hall,index) => {
