@@ -5,3 +5,10 @@ export interface MovieCardType{
     rating:number;
     type:string;
 }
+
+export interface CelebrityCardType{
+    name:string;
+    imageUrl:string;
+    _id:string;
+    role:string;
+}

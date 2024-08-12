@@ -1,6 +1,16 @@
+"use client"
 import React from 'react'
 import { BsFillStarFill, BsShare } from 'react-icons/bs'
 import './MoviePage.css'
+import MovieCarousel from '@/components/MovieCarousel/MovieCarousel'
+
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import {Swiper,SwiperSlide} from 'swiper/react';
+import { FreeMode, Pagination } from 'swiper/modules'
+import CelebCard from '@/components/CelebCard/CelebCard'
+
 const MoviePage = () => {
 
      const movie={
@@ -55,7 +65,44 @@ const MoviePage = () => {
                 role:"Actor",
                 imageUrl:"https://in.bmscdn.com/iedb/artist/images/website/poster/large/shraddha-kapoor-23323-1676723901.jpg"
             }
-        ]
+        ],
+        crew:[
+            {
+                _id:"1",
+                name:"Amar Kaushik",
+                role:"Director",
+                imageUrl:"https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/amar-kaushik-iein008750-24-03-2017-14-02-49.jpg"
+            },
+            {
+                _id:"1",
+                name:"Amar Kaushik",
+                role:"Director",
+                imageUrl:"https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/amar-kaushik-iein008750-24-03-2017-14-02-49.jpg"
+            },
+            {
+                _id:"1",
+                name:"Amar Kaushik",
+                role:"Director",
+                imageUrl:"https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/amar-kaushik-iein008750-24-03-2017-14-02-49.jpg"
+            },
+            {
+                _id:"1",
+                name:"Amar Kaushik",
+                role:"Director",
+                imageUrl:"https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/amar-kaushik-iein008750-24-03-2017-14-02-49.jpg"
+            },
+            {
+                _id:"1",
+                name:"Amar Kaushik",
+                role:"Director",
+                imageUrl:"https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/amar-kaushik-iein008750-24-03-2017-14-02-49.jpg"
+            }
+
+
+        ],
+        about:"After the events of Stree, the town of Chanderi is being haunted again. This time, women are mysteriously abducted by a terrifying headless entity. Once again, it`s up to Bicky and his friends to save their town and loved ones."
+        
+
      }    
   return (
     <div className='moviepage'>
@@ -119,7 +166,97 @@ const MoviePage = () => {
             </div>
         </div>
         </div>
-      <div className='c2'></div>
+      <div className='c2'>
+        <h1>About the Movie</h1>
+        <p>{movie.about}</p>
+        <div className='line'></div>
+        <h1>Cast</h1>
+        <div className='circlecardslider'>
+            <Swiper
+                slidesPerView={1}
+                spaceBetween={1}
+                freeMode={true}
+                pagination={{
+                    clickable:true,
+                }}
+                breakpoints={{
+                    '@0.00':{
+                        slidesPerView:1,
+                        spaceBetween:2,
+                    },
+                    '@0.75':{
+                        slidesPerView:2,
+                        spaceBetween:2,
+                    },
+                    '@1.00':{
+                        slidesPerView:3,
+                        spaceBetween:2,
+                    },
+                    '@1.50':{
+                        slidesPerView:4,
+                        spaceBetween:2,
+                    },
+                }}
+                modules={[FreeMode, Pagination]}
+                className='mySwiper'
+            >
+                {
+                    movie.cast.map((cast,index) => {
+                        return (
+                            <SwiperSlide key={index}>
+                                <CelebCard {...cast}/>
+                            </SwiperSlide>
+                        )
+                    })
+                }
+            </Swiper>
+        </div>
+        <div className='line'></div>
+        <h1>Crew</h1>
+        <div className='circlecardslider'>
+        <Swiper
+                slidesPerView={1}
+                spaceBetween={1}
+                freeMode={true}
+                pagination={{
+                    clickable:true,
+                }}
+                breakpoints={{
+                    '@0.00':{
+                        slidesPerView:1,
+                        spaceBetween:2,
+                    },
+                    '@0.75':{
+                        slidesPerView:2,
+                        spaceBetween:2,
+                    },
+                    '@1.00':{
+                        slidesPerView:3,
+                        spaceBetween:2,
+                    },
+                    '@1.50':{
+                        slidesPerView:4,
+                        spaceBetween:2,
+                    },
+                }}
+                modules={[FreeMode, Pagination]}
+                className='mySwiper'
+            >
+                {
+                    movie.crew.map((crew,index) => {
+                        return (
+                            <SwiperSlide key={index}>
+                                <CelebCard {...crew}/>
+                            </SwiperSlide>
+                        )
+                    })
+                }
+            </Swiper>
+        </div>
+        <div className='line'></div>
+        <h1>You might also like</h1>
+        <MovieCarousel/>
+      </div>
     </div>
   )
 }

@@ -10,7 +10,7 @@
     background-position: center;
 }
 .moviepage .c1 .c11{
-    background: linear-gradient(90deg, rgb(0,0, 0) 10%, rgba(255, 255, 255, 0) 50%, rgb(0, 0, 0) 90%);
+    background: linear-gradient(90deg, rgb(0,0, 0) 10%, rgba(255, 255, 255, 0) 50%, rgba(90, 88, 88, 0.241) 70%);
     min-height: 50vh;
     padding: 50px;
     display: flex;
@@ -25,6 +25,12 @@
 
 .moviepage .c1 .c11 .right{
     position: relative;
+    margin-bottom: 300px;
+}
+
+.moviepage .c1 .c11 .right .sharebtn{
+    background-color: rgba(56, 54, 54, 0);
+    color: white;
 }
 
 .moviepage .c1 .c11 .left .movie_poster{
@@ -99,4 +105,33 @@
     width:fit-content;
     font-weight: 400;
     cursor: pointer;
+}
+
+.moviepage .c2 {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+
+.moviepage .c2 h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--col2);
+    width: fit-content;
+    padding: 0px 0px;
+}
+
+.moviepage .c2 p{
+    font-size: 18px;
+    font-weight: 400;
+    color: grey;
+}
+
+.moviepage .c2 .line{
+    width:100%;
+    height: 1px;
+    background-color: rgb(233,233,233);
+    margin: 30px 0px;
 }
