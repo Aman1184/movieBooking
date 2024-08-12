@@ -1,0 +1,48 @@
+.moviecard{
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 5px #ffffff;
+    width:95%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.moviecard .movieimg{
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height: 350px;
+    position: relative;
+}
+
+.moviecard .movieimg .rating{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 5px;
+}
+
+.moviecard .movieimg .rating .star{
+    color: var(--col1);
+}
+
+.moviecard .details .title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: white;
+}
+
+.moviecard .details .type{
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
